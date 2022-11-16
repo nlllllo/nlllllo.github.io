@@ -1,0 +1,180 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.wang/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://kind-snyder-68dad8.netlify.app/",
+            "path": "index.html",
+            "saved": true,
+            "size": 5704,
+            "children": [
+                {
+                    "url": "https://kind-snyder-68dad8.netlify.app/resources/gif_green.a6a9b9f2.gif",
+                    "path": "img/gif_green.a6a9b9f2.gif",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://kind-snyder-68dad8.netlify.app/resources/icons_white@3x.8f846249.png",
+                    "path": "img/icons_white@3x.8f846249.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://kind-snyder-68dad8.netlify.app/resources/DownloadButton@1x.8b2e87e4.png",
+                    "path": "img/DownloadButton@1x.8b2e87e4.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://kind-snyder-68dad8.netlify.app/resources/DownloadButton_ios@1x.eaa009b9.png",
+                    "path": "img/DownloadButton_ios@1x.eaa009b9.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://kind-snyder-68dad8.netlify.app/resources/result.a12cc1c2.js",
+                    "path": "js/result.a12cc1c2.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://kind-snyder-68dad8.netlify.app/resources/chunk-vendors.43a3f882.js",
+                    "path": "js/chunk-vendors.43a3f882.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://kind-snyder-68dad8.netlify.app/resources/chunk-vendors.901092b5.css",
+                    "path": "css/chunk-vendors.901092b5.css",
+                    "saved": true,
+                    "size": 58594,
+                    "children": []
+                },
+                {
+                    "url": "https://kind-snyder-68dad8.netlify.app/resources/app.cd318c53.css",
+                    "path": "css/app.cd318c53.css",
+                    "saved": true,
+                    "size": 20235,
+                    "children": [
+                        {
+                            "url": "https://kind-snyder-68dad8.netlify.app/img/img_bg@3x_bak.d8d2f7ea.png",
+                            "saved": false
+                        }
+                    ]
+                },
+                {
+                    "url": "https://kind-snyder-68dad8.netlify.app/resources/result.4d87c9ef.css",
+                    "path": "css/result.4d87c9ef.css",
+                    "saved": true,
+                    "size": 20574,
+                    "children": [
+                        {
+                            "url": "https://kind-snyder-68dad8.netlify.app/img/img_bg@3x.0055ee09.0055ee09.png",
+                            "path": "img/img_bg@3x.0055ee09.0055ee09.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://kind-snyder-68dad8.netlify.app/img/img_bg_r@3x.1e951c96.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://kind-snyder-68dad8.netlify.app/img/img_bg_y@3x.548bb419.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://kind-snyder-68dad8.netlify.app/img/img_bg_o@3x.9c2277ce.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://kind-snyder-68dad8.netlify.app/img/img_bg@3x_bak.d8d2f7ea.png",
+                            "saved": false
+                        },
+                        {
+                            "url": "https://kind-snyder-68dad8.netlify.app/img/img_green@3x.86277116.png",
+                            "path": "img/img_green@3x.86277116.png",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        },
+                        {
+                            "url": "https://kind-snyder-68dad8.netlify.app/img/no_data.bb569e1f.png",
+                            "saved": false
+                        }
+                    ]
+                },
+                {
+                    "url": "https://kind-snyder-68dad8.netlify.app/resources/favicon.ico",
+                    "path": "favicon.ico",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "alias": "kind-snyder-68dad8-netlify-app-6p3bhu1w",
+    "info": {
+        "remark": [],
+        "title": "通信大数据行程卡",
+        "domain": "kind-snyder-68dad8.netlify.app",
+        "origin": "https://kind-snyder-68dad8.netlify.app",
+        "ip": "52.220.193.16",
+        "main": "index.html",
+        "url": "https://kind-snyder-68dad8.netlify.app/",
+        "totalSize": "105 kB",
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://kind-snyder-68dad8.netlify.app/",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.wang/"
+            }
+        },
+        "response": {
+            "responseUrl": "https://kind-snyder-68dad8.netlify.app/",
+            "redirects": [],
+            "statusCode": 200,
+            "headers": {
+                "age": "131447",
+                "cache-control": "public, max-age=0, must-revalidate",
+                "content-length": "6047",
+                "content-type": "text/html; charset=UTF-8",
+                "date": "Wed, 13 Jul 2022 18:10:23 GMT",
+                "etag": "\"7cb8db2a0ea3b338a32559fcaf464395-ssl\"",
+                "server": "Netlify",
+                "strict-transport-security": "max-age=31536000; includeSubDomains; preload",
+                "x-nf-request-id": "01G809DXCQAA3C4V5BZE1FJCFY",
+                "connection": "close"
+            }
+        },
+        "time": {
+            "start": "2022-07-15T06:41:09.180Z",
+            "end": "2022-07-15T06:41:14.078Z"
+        }
+    },
+    "options": {
+        "url": "https://kind-snyder-68dad8.netlify.app/",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "formatter": [],
+        "filenameGenerator": "byType"
+    }
+}

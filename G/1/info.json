@@ -1,0 +1,153 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.wang/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://www.gdjrxy.top/gduf_io/index.html",
+            "path": "index.html",
+            "saved": true,
+            "size": 14556,
+            "children": [
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/images/gduf_speed.png",
+                    "path": "img/gduf_speed.png",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/images/image.jpg",
+                    "path": "img/image.jpeg",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/js/jquery.min.js",
+                    "path": "js/jquery.min.js",
+                    "saved": true,
+                    "size": 195430,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/js/qrcode.js",
+                    "path": "js/qrcode.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/js/mui.min.js",
+                    "path": "js/mui.min.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/js/mui.picker.min.js",
+                    "path": "js/mui.picker.min.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/js/common.js",
+                    "path": "js/common.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/css/mui.min.css",
+                    "path": "css/mui.min.css",
+                    "saved": true,
+                    "size": 96863,
+                    "children": [
+                        {
+                            "url": "https://www.gdjrxy.top/gduf_io/fonts/mui.ttf",
+                            "saved": false
+                        }
+                    ]
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/css/mui.picker.min.css",
+                    "path": "css/mui.picker.min.css",
+                    "saved": true,
+                    "size": 6047,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/css/app.css",
+                    "path": "css/app.css",
+                    "saved": true,
+                    "size": 7404,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/css/style.css",
+                    "path": "css/style.css",
+                    "saved": true,
+                    "size": 12938,
+                    "children": []
+                }
+            ]
+        }
+    ],
+    "alias": "www-gdjrxy-top-3hdw9ode",
+    "info": {
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://www.gdjrxy.top/gduf_io/index.html",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.wang/"
+            }
+        },
+        "response": {
+            "redirects": [],
+            "responseUrl": "https://www.gdjrxy.top/gduf_io/index.html",
+            "statusCode": 200,
+            "headers": {
+                "server": "nginx",
+                "date": "Wed, 06 Apr 2022 15:04:11 GMT",
+                "content-type": "text/html",
+                "content-length": "15933",
+                "last-modified": "Tue, 05 Apr 2022 08:16:05 GMT",
+                "connection": "close",
+                "vary": "Accept-Encoding",
+                "etag": "\"624bfac5-3e3d\"",
+                "strict-transport-security": "max-age=31536000",
+                "cache-control": "no-store, no-cache, must-revalidate",
+                "accept-ranges": "bytes"
+            }
+        },
+        "time": {
+            "start": "2022-04-06T15:04:10.847Z",
+            "end": "2022-04-06T15:04:15.974Z"
+        },
+        "remark": [],
+        "title": "易广金出入凭证生成器",
+        "ip": "23.225.191.80",
+        "url": "https://www.gdjrxy.top/gduf_io/index.html",
+        "main": "index.html",
+        "domain": "www.gdjrxy.top",
+        "origin": "https://www.gdjrxy.top",
+        "totalSize": "333 kB"
+    },
+    "options": {
+        "formatter": [],
+        "url": "https://www.gdjrxy.top/gduf_io/index.html",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "filenameGenerator": "byType"
+    }
+}

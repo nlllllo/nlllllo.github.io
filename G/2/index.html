@@ -1,0 +1,113 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+    
+    <title>易广金-学生端</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script data-website-id="fbeb1780-db6d-4759-bf72-1a6137feaef6" src="js/umami.js"></script>
+    <script type="text/javascript" src="js/mui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script src="js/util.js"></script>
+    <style>
+        body {
+            padding: 2%;
+        }
+        
+        a {
+            display: block;
+            text-align: center;
+            width: 21%;
+            text-decoration: none;
+            color: #000;
+            float: left;
+        }
+        
+        a span {
+            display: block;
+            margin-top: 0px;
+            line-height: 20px;
+            height: 40px;
+        }
+        
+        a img {
+            width: 100%;
+        }
+        
+        #mainBox {
+            display: none;
+        }
+        
+        #mainBox a {
+            margin: 2%;
+        }
+        
+        .noticeBox {
+            overflow: hidden;
+            width: 100%;
+            float: left;
+        }
+        
+        .noticeBox .item {
+            border-bottom: 1px solid #ccc;
+            overflow: hidden;
+            padding: 5px 0 5px 0;
+        }
+        
+        .noticeBox .item:first-child {
+            border-top: 1px solid #ccc;
+        }
+        
+        .noticeBox .item span {
+            display: block;
+            width: 100%;
+            float: left;
+            font-size: 12px;
+            line-height: 20px;
+        }
+        
+        .noticeBox .item span:last-child {
+            display: block;
+            width: 100%;
+            float: left;
+            text-align: left;
+            font-size: 12px;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainBox">
+        <a href="../4.html"><img src="img/qjzs.png"><span>请假助手</span></a>
+        <a href="../hh/6.html"><img src="img/cwj.png"><span>查快递</span></a>
+        <a><img src="img/xszs.png"><span>新生助手</span></a>
+        <a><img src="img/yjth.png"><span>一键通话</span></a>
+        <a><img src="img/jwxt.png"><span>教务系统</span></a>
+        <a href="../7/7.html"><img src="img/stfw.png"><span>社团服务</span></a>
+        <a><img src="img/xwzl.png"><span>寻物招领</span></a>
+        <a><img src="img/health.png"><span>健康打卡</span></a>
+        <a><img src="img/backschool.png"><span>返校申请</span></a>
+        <a id="student-index" href="../3/index.html"><img src="img/outschool.png"><span>出校申报</span></a>
+        <a><img src="img/kjscx.png"><span>空教室查询</span></a>
+        <a><img src="img/xzzs.png"><span>学子之声</span></a>
+        
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        (function(mui) {
+            mui.init();
+        })(mui);
+        window.onload = function() {
+            try {
+                // alert("pass");
+                verify();
+            } catch (err) {
+                alert(err.message);
+            }
+        };
+        $("#student-index").attr("href", "../3/index.html" + location.search);
+        $("#mainBox").show();
+    </script>
+
+
+</body></html>

@@ -1,0 +1,373 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+    
+    <title>易广金出入凭证生成器</title>
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/mui.picker.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/qrcode.js"></script>
+    <script type="text/javascript" src="js/mui.min.js"></script>
+    <script type="text/javascript" src="js/mui.picker.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <style type="text/css">
+        .btn-twinkle {
+            color: #fff;
+            border: none;
+            animation: twinkle 1s alternate infinite;
+        }
+        
+        .btn-twinkle-red {
+            color: #fff;
+            border: none;
+            animation: twinkle_red 1.5s alternate infinite;
+        }
+        
+        p.p2 {
+            margin: 5.0px 0.0px 5.0px 0.0px;
+            text-indent: 2em;
+            line-height: 37.0px;
+            font: 14.0px 'PingFang SC Semibold';
+            color: #1d1d1d;
+            -webkit-text-stroke: #1d1d1d
+        }
+        
+        p.p3 {
+            margin: 5.0px 0.0px 5.0px 0.0px;
+            text-indent: 2em;
+            line-height: 37.0px;
+            font: 14.0px 'PingFang SC';
+            color: #1d1d1d;
+            -webkit-text-stroke: #1d1d1d
+        }
+        
+        p.p4 {
+            margin: 5.0px 0.0px 5.0px 0.0px;
+            text-indent: 2em;
+            line-height: 31.0px;
+            font: 14.0px 'PingFang SC';
+            color: #1d1d1d;
+            -webkit-text-stroke: #1d1d1d
+        }
+        
+        p.p5 {
+            margin: 5.0px 0.0px 5.0px 0.0px;
+            text-indent: 2em;
+            line-height: 31.0px;
+            font: 14.0px 'PingFang SC Semibold';
+            color: #1d1d1d;
+            -webkit-text-stroke: #1d1d1d
+        }
+        
+        p.p6 {
+            margin: 5.0px 0.0px 5.0px 0.0px;
+            text-align: right;
+            line-height: 37.0px;
+            font: 14.0px 'PingFang SC';
+            color: #1d1d1d;
+            -webkit-text-stroke: #1d1d1d
+        }
+        
+        span.s1 {
+            font: 16.0px 'PingFang SC';
+            font-kerning: none
+        }
+        
+        span.s2 {
+            font: 14.0px 'PingFang SC';
+            font-kerning: none
+        }
+        
+        span.s3 {
+            font-kerning: none
+        }
+        
+        span.s4 {
+            font: 12.0px Tahoma;
+            font-kerning: none
+        }
+        
+        span.s5 {
+            font-kerning: none;
+            color: #141414;
+            background-color: #ffffff;
+            -webkit-text-stroke: 0px #6d6d6d
+        }
+        
+        @keyframes twinkle {
+            from {
+                background: #16e2eb;
+            }
+            to {
+                background: #3b6e99;
+            }
+        }
+        
+        @keyframes twinkle_red {
+            from {
+                background: #eb1616;
+            }
+            to {
+                background: #993b3b;
+            }
+        }
+        
+        img {
+            max-width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="aui-navBar aui-navBar-fixed">
+        <div class="aui-center">
+            <span class="aui-center-title">易广金出入凭证生成器</span>
+        </div>
+    </header>
+    <div class="aui-code-box" id="content">
+        <form action="">
+            <input type="text" class="aui-code-line-input" name="search" value="" id="studentName" autocomplete="off" placeholder="请输入姓名：宁昊威">
+            <input type="text" class="aui-code-line-input" name="search" value="" id="studentId" autocomplete="off" placeholder="请输入学号：201571201">
+            <input type="text" class="aui-code-line-input" name="search" value="" id="sex" autocomplete="off" placeholder="请输入性别：男">
+            <input type="text" class="aui-code-line-input" name="search" value="" id="className" autocomplete="off" placeholder="请输入班级名称：20行政管理-2班">
+            <input type="text" class="aui-code-line-input" name="search" value="" id="specialty" autocomplete="off" placeholder="请输入专业：行政管理学">
+            <input type="text" class="aui-code-line-input" name="search" value="" id="departmentName" autocomplete="off" placeholder="请输入学院名称：公共管理学院">
+            <input type="text" class="aui-code-line-input" name="search" value="" id="auditName" autocomplete="off" placeholder="请输入辅导员：雍和明">
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <div id="outType" class="outType" value="">
+                        <div class="mui-navigate-right">
+                            <div class="value" align="left">请选择外出类型</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <div id="outAddress" class="outAddress" value="">
+                        <div class="mui-navigate-right">
+                            <div class="value" align="left">请选择外出去向</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="mui-table-view">
+                <li class="mui-table-view-cell">
+                    <div id="color" class="color" value="">
+                        <div class="mui-navigate-right">
+                            <div class="value" align="left">请选背景颜色</div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <div class="aui-che-item">
+                <div class="aui-cell-che">
+                    <input type="checkbox" class="aui-well-check" name="checkbox1" id="checkbox1" checked="checked">
+                    <i class="aui-well-icon-checked"></i>
+                </div>我已经阅读并同意 <a href="disclaimer.html">《免责声明》</a>
+            </div>
+            <p class="p2" align="left">点击图片直达<span class="s1" style="color:rgb(255, 0, 0)">厂金加速器</span></p>
+            <p class="p3" align="right"><span class="s4">——厂金人自己的加速器</span></p>
+            <a href="https://tdjsq.org/#/register?code=J4U81UV8"><img src="img/gduf_speed.png"></a>
+            <p class="p4"><span class="s4">（此位置为广告位，广告中提供的服务非本站提供）</span></p>
+            <div class="aui-code-btn">
+                <button class="btn-twinkle-red" type="button" onclick="card()">金融小店（自动打卡、赞赏作者）</button>
+            </div>
+            <div class="aui-code-btn">
+                <button type="button" onclick="tgGourd()">TG频道（领取自动打卡优惠券）</button>
+            </div>
+            <div class="aui-code-btn">
+                <button class="btn-twinkle" type="button" onclick="generateQRcode()" id="bt1">生成二维码使用易班扫码打开(推荐)</button>
+            </div>
+            <div class="aui-code-btn">
+                <button type="button" onclick="next()" id="bt1">直接进入页面</button>
+            </div>
+
+        </form>
+        <p class="p2"><span class="s4">愿悲伤不再 愿人间无恙</span></p>
+        <img src="img/image.jpeg">
+    </div>
+    <div id="result" class="aui-code-box" style="display: none;">
+        <div id="qrcodeTable" align="center"></div>
+        <div class="aui-code-btn">
+            <button type="button" onclick="back()">返回</button>
+        </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        (function(mui) {
+            alert("官方接口修复了可以未经授权获取颜色的bug\n因此今后再无自动换色\n现推出手动换色版本\n大家出门时可以向有官方码的同学询问官方颜色\n接着自己手动选择\n\n生成的二维码颜色对应打开页面后的颜色\n进到出入码页面后还可以点击页面任何地方换色\n\n生成器主页有tg群的入口，\n（需要VPN，推荐使用自家厂金VPN）");
+            mui.init();
+
+
+            var userPicker1 = new mui.PopPicker();
+            userPicker1.setData([{
+                value: '0',
+                text: '收寄快递（1小时有效）'
+            }, {
+                value: '1',
+                text: '临时出校（一天仅一次）'
+            }, {
+                value: '2',
+                text: '出校超时（申请进校）'
+            }, {
+                value: '3',
+                text: '假期出行'
+            }, {
+                value: '4',
+                text: '实习'
+            }, {
+                value: '5',
+                text: '求职'
+            }, {
+                value: '6',
+                text: '探亲'
+            }, {
+                value: '7',
+                text: '就医'
+            }, {
+                value: '8',
+                text: '其他'
+            }]);
+            var showUserPickerButton1 = mui('#outType')[0];
+            showUserPickerButton1.addEventListener('tap', function(event) {
+                $("input").blur();
+                $("textarea").blur();
+                userPicker1.show(function(items) {
+                    $(showUserPickerButton1).find(".value").html('' + items[0].text);
+                    $(showUserPickerButton1).attr("value", items[0].value);
+                });
+            }, false);
+
+
+            var userPicker2 = new mui.PopPicker();
+            userPicker2.setData([{
+                value: '0',
+                text: '广东省广州市天河区'
+            }, {
+                value: '1',
+                text: '广东省肇庆市端州区'
+            }, {
+                value: '2',
+                text: '广东省清远市清城区'
+            }]);
+            var showUserPickerButton2 = mui('#outAddress')[0];
+            showUserPickerButton2.addEventListener('tap', function(event) {
+                $("input").blur();
+                $("textarea").blur();
+                userPicker2.show(function(items) {
+                    $(showUserPickerButton2).find(".value").html('' + items[0].text);
+                    $(showUserPickerButton2).attr("value", items[0].value);
+                });
+            }, false);
+
+
+            var userPicker3 = new mui.PopPicker();
+            userPicker3.setData([{
+                value: 'greenyellow',
+                text: '青绿色'
+            }, {
+                value: 'green',
+                text: '深绿色'
+            }, {
+                value: 'cyan',
+                text: '青蓝色'
+            }, {
+                value: 'cadetblue',
+                text: '灰绿（蓝）色'
+            }, {
+                value: 'blue',
+                text: '深蓝色'
+            }, {
+                value: 'blueviolet',
+                text: '浅紫（蓝紫）色'
+            }, {
+                value: 'purple',
+                text: '深紫色'
+            }, {
+                value: 'black',
+                text: '黑色'
+            }]);
+            var showUserPickerButton3 = mui('#color')[0];
+            showUserPickerButton3.addEventListener('tap', function(event) {
+                $("input").blur();
+                $("textarea").blur();
+                userPicker3.show(function(items) {
+                    $(showUserPickerButton3).find(".value").html('' + items[0].text);
+                    $(showUserPickerButton3).attr("value", items[0].value);
+                });
+            }, false);
+        })(mui);
+
+        function generateUrl() {
+            var name = document.getElementById('studentName').value.replace(/(^\s*)|(\s*$)/g, '');
+            var id = document.getElementById('studentId').value.replace(/(^\s*)|(\s*$)/g, '');
+            var sex = document.getElementById('sex').value.replace(/(^\s*)|(\s*$)/g, '');
+            var className = document.getElementById('className').value.replace(/(^\s*)|(\s*$)/g, '');
+            var specialty = document.getElementById('specialty').value.replace(/(^\s*)|(\s*$)/g, '');
+            var departmentName = document.getElementById('departmentName').value.replace(/(^\s*)|(\s*$)/g, '');
+            var auditName = document.getElementById('auditName').value.replace(/(^\s*)|(\s*$)/g, '');
+            var outType = $("#outType").attr("value").replace(/(^\s*)|(\s*$)/g, '');
+            var outAddress = $("#outAddress").attr("value").replace(/(^\s*)|(\s*$)/g, '');
+            var color = $("#color").attr("value").replace(/(^\s*)|(\s*$)/g, '');
+            var checkstatus = document.getElementById('checkbox1').checked;
+
+            if (checkstatus == true) {
+                if (name.length != 0 && id.length != 0 && sex.length != 0 && className.length != 0 && specialty.length != 0 && departmentName.length != 0 && auditName.length != 0 && auditName.length != 0 && outType.length != 0 && outAddress.length != 0 && color.length != 0) {
+                    url = "../2/index.html?studentName=" + name + "&studentId=" + id + "&studentSex=" + sex + "&className=" + className + "&specialty=" + specialty + "&departmentName=" + departmentName + "&auditName=" + auditName + "&outType=" + outType + "&outAddress=" + outAddress + "&color=" + color;
+                    return url
+                } else {
+                    return false
+                }
+            } else {
+                alert("请先阅读并同意免责说明书！");
+                return false
+            }
+        };
+
+        function generateQRcode() {
+            url = generateUrl();
+            if (url == false) {
+                mui.toast("请完整填写所有项");
+            } else {
+                var qrcode = new QRCode('qrcodeTable', {
+                    text: encodeURI(url),
+                    width: 300,
+                    height: 300,
+                    colorDark: $("#color").attr("value").replace(/(^\s*)|(\s*$)/g, ''),
+                    colorLight: "#ffffff"
+                });
+                document.getElementById('content').style.display = 'none';
+                document.getElementById('result').style.display = '';
+            };
+        };
+
+        function back() {
+            document.getElementById('content').style.display = '';
+            document.getElementById('result').style.display = 'none';
+            document.getElementById('qrcodeTable').innerHTML = '';
+        };
+
+        function next() {
+            url = generateUrl();
+            if (url == false) {
+                mui.toast("请完整填写所有项");
+            } else {
+                window.location.href = url.replace("https://www.gdjrxy.top/gduf_io/", "");
+            };
+        };
+
+        function tgGourd() {
+            window.location.href = "https://t.me/gdufcard";
+        };
+
+        function card() {
+            window.location.href = "http://card.gdjrxy.top/";
+        }
+    </script>
+
+
+</body></html>

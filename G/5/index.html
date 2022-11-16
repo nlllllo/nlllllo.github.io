@@ -1,0 +1,248 @@
+<!DOCTYPE html><html ><head><meta charset="utf-8">
+    
+    <title>出入凭证</title>
+    <meta name="theme-color" content="#6DB0FA">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+    <script data-website-id="fbeb1780-db6d-4759-bf72-1a6137feaef6" src="js/umami.js"></script>
+    <script type="text/javascript" src="js/mui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <style>
+        .infoBox {
+            padding: 0 5px;
+            line-height: 30px;
+            font-size: 16px;
+            color: #333;
+        }
+        
+        .title {
+            font-weight: bold;
+            font-size: 20px;
+            margin: 20px 0;
+            color: #fff;
+        }
+        
+        .content {
+            color: #fff;
+        }
+        
+        .content p {
+            color: #fff;
+            line-height: 25px;
+            margin: 0;
+            font-size: 16px;
+        }
+        
+        .btnBox {
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .btnBox button {
+            min-width: 70%;
+            font-size: 35px;
+            height: 200px;
+        }
+        
+        .timeBox {
+            text-align: center;
+            font-weight: bold;
+            font-size: 26px;
+            color: #fff;
+            margin-top: 15px;
+            padding: 0 10px;
+            margin: 20px auto 0 auto;
+            width: 100%;
+            height: 35px;
+            border-radius: 5px;
+        }
+        
+        #remainingTime {
+            text-align: center;
+            color: #fff;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes kf-black {
+            from {
+                color: black;
+            }
+            to {
+                color: #eee;
+            }
+        }
+        
+        @keyframes kf-greenyellow {
+            from {
+                color: greenyellow;
+            }
+            to {
+                color: #eee;
+            }
+        }
+        
+        @keyframes kf-blueviolet {
+            from {
+                color: blueviolet;
+            }
+            to {
+                color: #eee;
+            }
+        }
+        
+        @keyframes kf-green {
+            from {
+                color: green;
+            }
+            to {
+                color: #eee;
+            }
+        }
+        
+        @keyframes kf-cyan {
+            from {
+                color: cyan;
+            }
+            to {
+                color: #eee;
+            }
+        }
+        
+        @keyframes kf-blue {
+            from {
+                color: blue;
+            }
+            to {
+                color: #eee;
+            }
+        }
+        
+        @keyframes kf-purple {
+            from {
+                color: purple;
+            }
+            to {
+                color: #eee;
+            }
+        }
+        
+        @keyframes kf-white {
+            from {
+                color: #fff;
+            }
+            to {
+                color: rgba(255, 255, 255, 0);
+            }
+        }
+        
+        #typeBox {
+            font-size: 100px;
+            font-weight: bold;
+            color: #000;
+            width: 160px;
+            line-height: normal;
+            text-align: center;
+            display: block;
+            margin: 0px auto 0px auto;
+            animation: kf-white 0.6s infinite;
+            -webkit-animation: kf-white 0.6s infinite;
+        }
+        
+        @-webkit-keyframes myfirst
+        /* Safari and Chrome */
+        
+        {
+            from {
+                border: 3px solid #0000FF;
+            }
+            to {
+                border: 3px solid #fff;
+            }
+        }
+        
+        #checkNA {
+            text-align: center;
+            color: #fff;
+            font-size: 34px;
+            font-weight: bold;
+        }
+        
+        #checkCode {
+            text-align: center;
+            color: #fff;
+            font-size: 26px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body onload="outshcool()" style="background: #fff">
+    <div class="infoBox">
+        <div class="title" style="text-align: center;">
+            <font class="typeTxt">出</font>校凭证
+        </div>
+        <div class="content">
+            <p style="text-indent: 2em;">
+                <span id="studentName" style="text-decoration: none;font-weight: bold;"></span> 同学可于
+                <span id="startTime" style="font-weight: bold;"></span>
+
+                <font class="typeTxt">出</font>校。
+            </p>
+            <p id="rxbz" style="text-indent: 2em;">注：必须在<span id="inSchoolEndTime" style="font-weight: bold;"></span>前返校。</p>
+
+        </div>
+        <div style="overflow: hidden;margin-top: 50px;">
+
+            <div id="remainingTime" class="remainingTimeBox"></div>
+            <div id="checkNA"></div>
+            <div id="typeBox" onclick="changeColor()"></div>
+            <div id="checkCode"></div>
+            <div id="timeBox" class="timeBox"></div>
+            <div id="tipBox"></div>
+        </div>
+    </div>
+
+
+<script type="text/javascript" charset="utf-8">
+    (function(mui) {
+        mui.init();
+    })(mui);
+
+    var iset;
+    var now = 0;
+    var nowT;
+    var endTime = new Date().getTime() + 300000;
+
+    function outshcool() {
+        now = new Date().getTime();
+        nowT = setInterval(function() {
+            now = now + 1000;
+            $("#timeBox").html(new Date(now).Format("yyyy-MM-dd hh:mm:ss"));
+            var s = endTime - now;
+            $("#remainingTime").html("该凭证<b>" + formatDuring(s) + "</b>后将失效，请尽快出校")
+        }, 1000);
+        $("#startTime").html(new Date().Format("yyyy-MM-dd")); // 出校
+        $("#inSchoolEndTime").html(new Date(new Date().getTime() + 14400000).Format("yyyy-MM-dd hh:mm:ss")); //必须进校
+        $("#studentName").html(loadData("studentName") + "（" + loadData("studentId") + "）");
+        $("#typeBox").html("出");
+        // $("#typeBox").css("animation", "kf-" + loadData("color") + " 0.6s infinite");
+        // $("#typeBox").css("-webkit-animation", "kf-" + loadData("color") + " 0.6s infinite");
+        $("body").css("background", loadData("color"));
+    }
+
+    function formatDuring(mss) {
+        var hours = parseInt((mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        hours = hours < 10 ? "0" + hours : hours;
+        var minutes = parseInt((mss % (1000 * 60 * 60)) / (1000 * 60));
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        var seconds = parseInt((mss % (1000 * 60)) / 1000);
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        return hours + ":" + minutes + ":" + seconds;
+    }
+</script>
+
+</body></html>

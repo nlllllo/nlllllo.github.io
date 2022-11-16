@@ -1,0 +1,121 @@
+{
+    "header": [
+        " *   ",
+        " *   如非需要调试，本文件可删除",
+        " *   非专业人员可将本文件删除",
+        " *   详细介绍请参考: https://bazhan.wang/faq#INFO-JSON",
+        " *   "
+    ],
+    "resources": [
+        {
+            "url": "https://www.gdjrxy.top/gduf_io/student-inschool.html?studentName=2&studentId=2&studentSex=2&className=2&specialty=2&departmentName=2&auditName=2&outType=0&outAddress=0&color=greenyellow",
+            "path": "index.html",
+            "saved": true,
+            "size": 6868,
+            "children": [
+                {
+                    "url": "https://gdjrxy.0755b2b.top/umami.js",
+                    "path": "js/umami.js",
+                    "saved": true,
+                    "size": 2839,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/js/mui.min.js",
+                    "path": "js/mui.min.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/js/jquery.min.js",
+                    "path": "js/jquery.min.js",
+                    "saved": true,
+                    "size": 195430,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/js/common.js",
+                    "path": "js/common.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/js/util.js",
+                    "path": "js/util.js",
+                    "saved": true,
+                    "size": 0,
+                    "children": []
+                },
+                {
+                    "url": "https://www.gdjrxy.top/gduf_io/css/mui.min.css",
+                    "path": "css/mui.min.css",
+                    "saved": true,
+                    "size": 96863,
+                    "children": [
+                        {
+                            "url": "https://www.gdjrxy.top/gduf_io/fonts/mui.ttf",
+                            "path": "fonts/mui.ttf",
+                            "saved": true,
+                            "size": 0,
+                            "children": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "alias": "www-gdjrxy-top-iqhmrywg",
+    "info": {
+        "request": {
+            "headers": {
+                "accept": "text/html,*/*",
+                "accept-language": "zh-CN,zh;q=0.9",
+                "cache-control": "no-cache",
+                "cookie": "",
+                "referer": "https://www.gdjrxy.top/gduf_io/student-inschool.html?studentName=2&studentId=2&studentSex=2&className=2&specialty=2&departmentName=2&auditName=2&outType=0&outAddress=0&color=greenyellow",
+                "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+                "x-scraper-website": "https://bazhan.wang/"
+            }
+        },
+        "response": {
+            "redirects": [],
+            "responseUrl": "https://www.gdjrxy.top/gduf_io/student-inschool.html?studentName=2&studentId=2&studentSex=2&className=2&specialty=2&departmentName=2&auditName=2&outType=0&outAddress=0&color=greenyellow",
+            "statusCode": 200,
+            "headers": {
+                "server": "nginx",
+                "date": "Wed, 06 Apr 2022 15:50:07 GMT",
+                "content-type": "text/html",
+                "content-length": "7221",
+                "last-modified": "Wed, 06 Apr 2022 13:54:12 GMT",
+                "connection": "close",
+                "vary": "Accept-Encoding",
+                "etag": "\"624d9b84-1c35\"",
+                "strict-transport-security": "max-age=31536000",
+                "cache-control": "no-store, no-cache, must-revalidate",
+                "accept-ranges": "bytes"
+            }
+        },
+        "time": {
+            "start": "2022-04-06T15:50:07.437Z",
+            "end": "2022-04-06T15:50:10.832Z"
+        },
+        "remark": [],
+        "title": "出入凭证",
+        "ip": "23.225.191.80",
+        "url": "https://www.gdjrxy.top/gduf_io/student-inschool.html?studentName=2&studentId=2&studentSex=2&className=2&specialty=2&departmentName=2&auditName=2&outType=0&outAddress=0&color=greenyellow",
+        "main": "index.html",
+        "domain": "www.gdjrxy.top",
+        "origin": "https://www.gdjrxy.top",
+        "totalSize": "302 kB"
+    },
+    "options": {
+        "formatter": [],
+        "url": "https://www.gdjrxy.top/gduf_io/student-inschool.html?studentName=2&studentId=2&studentSex=2&className=2&specialty=2&departmentName=2&auditName=2&outType=0&outAddress=0&color=greenyellow",
+        "referer": "",
+        "cookies": "",
+        "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36",
+        "filenameGenerator": "byType"
+    }
+}

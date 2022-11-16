@@ -1,0 +1,105 @@
+<!DOCTYPE html><html><head><meta charset="utf-8">
+    
+    <title>出校申报</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="css/mui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script type="text/javascript" src="js/mui.min.js"></script>
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="js/common.js"></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <style>
+        .footerBtnBox {
+            padding: 10px;
+            height: 54px;
+        }
+        
+        .mui-card-footer.footerBtnBox .mui-card-link {
+            text-align: center;
+            background: #3a96fa;
+            width: 49%;
+            display: block;
+            color: #fff;
+            border-radius: 5px;
+            line-height: 34px;
+            height: 34px;
+            transition: all 0.3s;
+        }
+        
+        .mui-card-footer.footerBtnBox .mui-card-link:last-child {
+            background: #EA5628
+        }
+        
+        .mui-card-footer.footerBtnBox .mui-card-link:last-child:active {
+            background: #CF2D28
+        }
+        
+        .mui-card-footer.footerBtnBox .mui-card-link:active {
+            background: #007AFF;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mui-content" id="outSchoolBox" style="padding-bottom: 45px;"></div>
+    <nav class="footerNav">
+        <button class="whiteBtn">
+            <span class="mui-icon mui-icon-more"></span>
+            <span>申请记录</span>
+        </button>
+        <button>
+            <span class="mui-icon mui-icon-compose"></span>
+            <span>出校申报</span>
+        </button>
+    </nav>
+    <script>
+        (function(mui) {
+            mui.init();
+        })(mui);
+
+        window.onload = function() {
+            try {
+
+                init();
+
+            } catch (err) {
+                alert(err.message);
+            }
+        }
+
+
+        function init() {
+            var randomNum = '';
+            for (var i = 0; i < 5; i++) {
+                randomNum += Math.floor(Math.random() * 10);
+            }
+            var html = '';
+            for (var i = 0; i < 2; i++) {
+                html += '<div class="mui-card">';
+                html += '<div class="mui-card-header">申请编号：' + new Date().Format("yyyyMMdd" + randomNum) + '</div>';
+                html += '<div class="mui-card-content">';
+                html += '<div class="mui-card-content-inner">';
+                html += '<div>姓<span style="visibility: hidden;">空空</span>名：' + String(loadData("studentName")) + '</div>';
+                html += '<div>学<span style="visibility: hidden;">空空</span>号：' + String(loadData("studentId")) + '</div>';
+                html += '<div>开始时间：' + new Date().Format("yyyy-MM-dd") + '</div>';
+                html += '<div>结束时间：' + new Date(new Date().getTime() + 259200000).Format("yyyy-MM-dd") + '</div>';
+                html += '<div>外出类型：临时出校（一天仅一次）</div>';
+                html += '<div>涉及天数：3天</div>';
+                html += '<div>出入次数：每天出入一次</div>';
+                html += '<div>状<span style="visibility: hidden;">空空</span>态：' + formatStatus() + '</div>';
+                html += '<div>提交时间：' + new Date(new Date().getTime() - 14400000).Format("yyyy-MM-dd hh:mm:ss") + '</div>';
+                html += '</div>';
+                html += '</div>';
+                html += '<div class="mui-card-footer footerBtnBox">';
+                html += '<a class="mui-card-link" href="../4/index.html' + location.search + '"' + '>详情</a>';
+                html += '<a class="mui-card-link" style="background:#eee;color:#999">取消</a>';
+                html += '</div>';
+                html += '</div>';
+            }
+            $("#outSchoolBox").html(html);
+        }
+    </script>
+
+
+</body></html>
